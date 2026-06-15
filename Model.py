@@ -55,7 +55,7 @@ sns.histplot(
     data=df, x="team1_runs", bins=15, kde=True, ax=axes[0, 0], color="skyblue"
 )
 axes[0, 0].set_title(
-    "Distribution of Team 1 Scores (Cleaned)", fontsize=14, pad=10
+    "Distribution of Team 1 Scores", fontsize=14, pad=10
 )
 axes[0, 0].set_xlabel("Runs", fontsize=12)
 axes[0, 0].set_ylabel("Count", fontsize=12)
@@ -79,7 +79,7 @@ axes[1, 0].pie(
     textprops={"fontsize": 12},
 )
 axes[1, 0].set_title(
-    "Toss Decisions Strategy (No Unknowns)", fontsize=14, pad=10
+    "Toss Decisions Strategy", fontsize=14, pad=10
 )
 city_avg_order = (
     df.groupby("city")["team1_runs"].mean().sort_values(ascending=False).index
